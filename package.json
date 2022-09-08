@@ -1,0 +1,59 @@
+{
+  "name": "expressjs-web3-backend",
+  "version": "0.0.1",
+  "description": "An ExpressJS backend starter for Web3.0.",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "keywords": [
+    "web3",
+    "wallet",
+    "backend"
+  ],
+  "author": "erhant",
+  "scripts": {
+    "start:dev": "export NODE_ENV=dev && npm start",
+    "start:test": "export NODE_ENV=test && npm start",
+    "start": "node build/app.js",
+    "test": "jest",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint",
+    "prestart": "npm run compile",
+    "subnet:start": "avalanche network start",
+    "subnet:stop": "avalanche network stop",
+    "subnet:status": "avalanche network status"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.1",
+    "@types/node": "^14.11.2",
+    "@types/supertest": "^2.0.12",
+    "gts": "^3.1.0",
+    "jest": "^28.1.1",
+    "prisma": "^4.2.1",
+    "ts-jest": "^28.0.4",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@prisma/client": "4.2.1",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.6.9",
+    "express": "^4.17.1",
+    "helmet": "^5.1.0",
+    "http-status-codes": "^2.2.0",
+    "joi": "^17.6.0",
+    "redis": "^4.2.0"
+  }
+}
