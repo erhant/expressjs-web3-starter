@@ -1,4 +1,3 @@
-import {randomBytes} from 'crypto';
 import {ethers} from 'ethers';
 
 /**
@@ -6,7 +5,7 @@ import {ethers} from 'ethers';
  */
 const constants = {
   Signatures: {
-    Challenge: ethers.utils.sha256('grateful-dead'), // this challenge is arbitrary
+    Challenge: ethers.utils.sha256(Buffer.from('grateful-dead', 'hex')), // this challenge is arbitrary
     PublicKeyKey: 'public-key',
     HeaderKey: 'client-signature',
   },

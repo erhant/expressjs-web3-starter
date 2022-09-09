@@ -1,10 +1,6 @@
 import Joi from 'joi';
 import {validate} from '../middlewares/validate';
-import {
-  redisSetKeyBody,
-  redisDeleteKeyBody,
-  redisGetKeyQuery,
-} from '../interfaces/diagnostic.interface';
+import {redisSetKeyBody, redisDeleteKeyBody, redisGetKeyQuery} from '../interfaces/diagnostic.interface';
 
 export const redisGetKeyValidator = validate(
   Joi.object<redisGetKeyQuery>({

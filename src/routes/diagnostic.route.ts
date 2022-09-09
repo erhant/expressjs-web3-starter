@@ -1,15 +1,6 @@
 import {Router} from 'express';
-import {
-  getBlockNumber,
-  redisDeleteKey,
-  redisGetKey,
-  redisSetKey,
-} from '../controllers/diagnostic.controller';
-import {
-  redisGetKeyValidator,
-  redisDeleteKeyValidator,
-  redisSetKeyValidator,
-} from '../validators/diagnostic.validator';
+import {getBlockNumber, redisDeleteKey, redisGetKey, redisSetKey} from '../controllers/diagnostic.controller';
+import {redisGetKeyValidator, redisDeleteKeyValidator, redisSetKeyValidator} from '../validators/diagnostic.validator';
 
 const router = Router();
 

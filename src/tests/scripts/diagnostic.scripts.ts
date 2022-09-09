@@ -1,4 +1,4 @@
-import {blockchainClient} from '../../clients/subnet';
+import {blockchainClient} from '../../clients/blockchain';
 
 export async function main() {
   const e = blockchainClient().provider;

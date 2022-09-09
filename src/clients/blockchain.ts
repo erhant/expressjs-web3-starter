@@ -37,9 +37,10 @@ class BlockchainClient implements Client {
    */
   public static getInstance(): BlockchainClient {
     if (!BlockchainClient.instance) {
+      // TODO: use whatever user wants here
       BlockchainClient.instance = new BlockchainClient(
-        config.Network.Local.URL,
-        config.Network.Local.CHAINID
+        config.Network.EthereumMainnet.URL,
+        config.Network.EthereumMainnet.CHAINID
       );
     }
     return BlockchainClient.instance;

@@ -10,9 +10,7 @@ class RedisClient implements Client {
     this.client = createClient({url});
 
     // @TODO setup better error handler
-    this.client.on('error', (err: unknown) =>
-      console.log('Redis Client Error', err)
-    );
+    this.client.on('error', (err: unknown) => console.log('Redis Client Error', err));
   }
 
   /// Calls connect function

@@ -1,10 +1,5 @@
 import {Router} from 'express';
-import {
-  addUser,
-  getAllUsers,
-  getUser,
-  deleteUser,
-} from '../controllers/user.controller';
+import {addUser, getAllUsers, getUser, deleteUser} from '../controllers/user.controller';
 import {getPublicKey} from '../middlewares/getPublicKey';
 import {getUserValidator} from '../validators/user.validator';
 

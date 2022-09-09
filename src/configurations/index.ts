@@ -17,6 +17,10 @@ const config = {
       URL: process.env.GRPC_AVALANCHE_URL!,
       CHAINID: Number(process.env.GRPC_AVALANCHE_CHAINID!),
     },
+    EthereumMainnet: {
+      URL: process.env.GRPC_ETHEREUM_URL!,
+      CHAINID: Number(process.env.GRPC_ETHEREUM_CHAINID!),
+    },
   },
   Redis: {
     URL: process.env.REDIS_URL!,

@@ -16,9 +16,7 @@ describe('User', () => {
 
   beforeAll(async () => {
     client = new ethers.Wallet(common.avalanchePrivateKey);
-    signature = client
-      ._signingKey()
-      .signDigest(constants.Signatures.Challenge).compact;
+    signature = client._signingKey().signDigest(constants.Signatures.Challenge).compact;
     publicKey = ethers.utils.computePublicKey(client.publicKey, true);
     console.log('Client public key:', publicKey);
   });

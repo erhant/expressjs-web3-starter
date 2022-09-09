@@ -1,16 +1,12 @@
 import {prismaClient} from './prisma';
 import {redisClient} from './redis';
-import {blockchainClient} from './subnet';
+import {blockchainClient} from './blockchain';
 
 /**
  * Calls destroy of each client singleton.
  */
 export async function destroyClients(): Promise<void> {
-  await Promise.all([
-    blockchainClient().destroy(),
-    redisClient().destroy(),
-    prismaClient().destroy(),
-  ]);
+  await Promise.all([blockchainClient().destroy(), redisClient().destroy(), prismaClient().destroy()]);
 }
 
 /**
@@ -19,11 +15,7 @@ export async function destroyClients(): Promise<void> {
  */
 export async function setupClients(): Promise<boolean> {
   // setups
-  await Promise.all([
-    blockchainClient().setup(),
-    redisClient().setup(),
-    prismaClient().setup(),
-  ]);
+  await Promise.all([blockchainClient().setup(), redisClient().setup(), prismaClient().setup()]);
   // healthchecks
   const hc = await Promise.all([
     blockchainClient().healthcheck(),

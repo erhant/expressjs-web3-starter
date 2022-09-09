@@ -1,4 +1,4 @@
-# Express Wallet Backend
+# ExpressJS Web3.0 Starter
 
 A generic backend with Redis, Prisma ORM (to PgSQL) and Ethers setup. It also has a signature-based authorization middleware, that maps a common signature to a public key.
 
@@ -14,7 +14,7 @@ The connection information for these are stored in `.env`. See an example file u
 
 ## Usage
 
-Just run `npm install` and then `npm start` to start the server. An environment file `.env` is required as follows:
+Just run `yarn` to install the packages and then `yarn run start` to start the server. An environment file `.env` is required as follows:
 
 ```bash
 PORT=<the port to listen>
@@ -22,7 +22,7 @@ PORT=<the port to listen>
 
 ## Testing
 
-Start the backend in a terminal with `npm run start:test`, and in another run `npm test` to execute unit tests. You can skip some tests with `.skip` if wanted, as linter will not be happy with the code when you comment stuff out. Note that Jest also sets `NODE_ENV` variable to be `test` when during testing.
+Start the backend in a terminal with `yarn run start:test`, and in another run `yarn test` to execute unit tests. You can skip some tests with `.skip` if wanted, as linter will not be happy with the code when you comment stuff out. Note that Jest also sets `NODE_ENV` variable to be `test` when during testing.
 
 ## Structure
 
